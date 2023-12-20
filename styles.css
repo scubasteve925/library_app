@@ -3,6 +3,7 @@ body {
 }
 
 .add-book {
+  margin: 10px 0px 10px 8px;
   height: 50px;
   width: 100px;
   border-radius: 10px;
@@ -43,10 +44,19 @@ body {
 }
 
 .author {
-  width: 300px;
+  width: 340px;
+}
+
+.pages {
+  width: 350px;
+}
+
+.checkbox {
+  width: 20px;
 }
 
 .delete-button {
+  margin-left: 200px;
   height: 35px;
   width: 75px;
   border-radius: 10px;
