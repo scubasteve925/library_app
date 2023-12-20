@@ -1,5 +1,9 @@
 let myLibrary = []
 const addBookButton = document.querySelector('.add-book')
+const body = document.querySelector('body')
+const list = document.querySelector('.list')
+const arrayDisplay = document.querySelector('.array-display')
+const deleteButton = document.querySelector('.delete-button')
 addBookButton.addEventListener('click', ()=> {
   addBookToLibrary()
 })
@@ -16,16 +20,17 @@ function addBookToLibrary() {
   displayArray()
 }
 
-//loops through every "book" in mylibrary and adds it to the current list
-function displayArray() {
-  
+function displayArray() {  
+  list.innerHTML = ''
   for(let i=0;i < myLibrary.length;i++) {
     const div = document.createElement('div')
+    div.classList.add('array-display')
     div.innerHTML = `
     <div class="title">${myLibrary[i].title}</div>
     <div class="author">${myLibrary[i].author}</div>
+    <button class="delete-button">Delete</button>
     `
-    div.classList.add('array-display')
     document.body.appendChild(div)
+    list.insertAdjacentElement('beforeend',div)
   }
 }
